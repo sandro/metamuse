@@ -1,0 +1,7 @@
+= metamuse
+
+Description goes here.
+
+== Copyright
+
+Copyright (c) 2009 Sandro Turriate. See LICENSE for details.
