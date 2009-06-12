@@ -1,7 +1,7 @@
 = metamuse
 
-Description goes here.
+Search for music metadata
 
 == Copyright
 
-Copyright (c) 2009 Sandro Turriate. See LICENSE for details.
+Copyright (c) 2009 Sandro Turriate. See MIT_LICENSE for details.
