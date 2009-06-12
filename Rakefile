@@ -5,7 +5,7 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "metamuse"
-    gem.summary = %Q{TODO}
+    gem.summary = %Q{Search for music metadata}
     gem.email = "sandro.turriate@gmail.com"
     gem.homepage = "http://github.com/sandro/metamuse"
     gem.authors = ["Sandro Turriate"]
