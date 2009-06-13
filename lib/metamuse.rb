@@ -2,9 +2,9 @@ $LOAD_PATH.unshift(File.dirname(__FILE__))
 
 require 'rubygems'
 require 'httparty'
-require 'metamuse/httparty_ext.rb'
-require 'metamuse/artist.rb'
-require 'metamuse/services/echonest.rb'
+require 'metamuse/httparty_ext'
+require 'metamuse/artist'
+require 'metamuse/services/echonest'
 
 class Metamuse
   class << self
