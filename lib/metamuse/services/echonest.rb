@@ -4,6 +4,7 @@ class Metamuse
       include HTTParty
       base_uri 'http://developer.echonest.com/api'
       default_params :version => 3
+      format :xml
 
       class << self
         attr_reader :api_key
