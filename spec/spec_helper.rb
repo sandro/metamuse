@@ -1,5 +1,6 @@
-require 'spec'
 begin; require 'rubygems'; rescue LoadError; end
+require 'spec'
+require 'spec/autorun'
 require 'fake_web'
 
 $LOAD_PATH.unshift(File.dirname(__FILE__))
