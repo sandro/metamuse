@@ -2,7 +2,6 @@ HTTParty::Request.class_eval do
   class << self
     attr_accessor :debug
   end
-  self.debug = true
 
   def perform_with_debug
     if self.class.debug
