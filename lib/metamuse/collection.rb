@@ -29,5 +29,15 @@ class Metamuse
         collection << items
       end
     end
+
+    def belongs_to(accessor, klass)
+      define_method(accessor) do
+        instance_variable_get(:"@#{accessor}")
+      end
+
+      define_method(:"#{accessor}=") do |parent|
+        instance_variable_set(:"@#{accessor}", parent)
+      end
+    end
   end
 end
