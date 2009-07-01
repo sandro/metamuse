@@ -4,10 +4,15 @@ begin; require 'rubygems'; rescue LoadError; end
 require 'cgi'
 require 'httparty'
 require 'httparty_ext'
-require 'metamuse/artist'
+
+require 'metamuse/collection'
 require 'metamuse/services/echonest'
 
 class Metamuse
+  autoload :Artist, 'metamuse/artist'
+  autoload :Album, 'metamuse/album'
+  autoload :Track, 'metamuse/track'
+
   class << self
     attr_reader :echonest_api_key
 
