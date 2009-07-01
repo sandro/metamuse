@@ -1,6 +1,7 @@
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 
 begin; require 'rubygems'; rescue LoadError; end
+require 'cgi'
 require 'httparty'
 require 'httparty_ext'
 require 'metamuse/artist'
