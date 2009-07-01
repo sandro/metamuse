@@ -15,8 +15,18 @@ class Metamuse
         default_params :api_key => api_key
       end
 
-      def self.find_artist(name)
-        Metamuse::Artist.from_echonest get('/search_artists', :query => {:query => name})
+      def self.artist(name)
+        build_artist get('/search_artists', :query => {:query => name})
+      end
+
+      private
+
+      def self.build_artist(response)
+        if artists = response['response']['artists']
+          artist = artists['artist']
+          artist = artist.first if artist.is_a?(Array)
+          Metamuse::Artist.new :name => artist['name'], :echonest_id => artist['id']
+        end
       end
     end
   end

@@ -11,7 +11,7 @@ describe "Metamuse" do
 
   describe "finding an artist" do
     it "searches through echonest" do
-      Metamuse::Services::Echonest.should_receive(:find_artist).with('coldplay')
+      Metamuse::Services::Echonest.should_receive(:artist).with('coldplay')
       Metamuse.find_artist('coldplay')
     end
   end

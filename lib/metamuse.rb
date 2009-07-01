@@ -17,6 +17,6 @@ class Metamuse
   end
 
   def self.find_artist(name)
-    Services::Echonest.find_artist(name)
+    Services::Echonest.artist(name)
   end
 end
