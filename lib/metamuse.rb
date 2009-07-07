@@ -3,9 +3,13 @@ $LOAD_PATH.unshift(File.dirname(__FILE__))
 begin; require 'rubygems'; rescue LoadError; end
 require 'cgi'
 require 'httparty'
+
 require 'httparty_ext'
+require 'array_ext'
+require 'arrayish'
 
 require 'metamuse/collection'
+require 'metamuse/association'
 require 'metamuse/services/echonest'
 
 class Metamuse

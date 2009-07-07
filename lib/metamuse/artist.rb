@@ -1,6 +1,6 @@
 class Metamuse
   class Artist
-    extend Collection
+    extend Association
     has_many :albums, Album
 
     attr_accessor :name, :echonest_id, :freebase_guid
