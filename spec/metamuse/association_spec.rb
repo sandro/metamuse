@@ -68,7 +68,5 @@ describe Metamuse::Association do
       @person.shoes << {:color => 'red'}
       @person.shoes.last.person.should == @person
     end
-
-    it "uses the person in the hash to override implicit belongs_to"
   end
 end
