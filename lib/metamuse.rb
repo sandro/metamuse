@@ -11,6 +11,7 @@ require 'arrayish'
 require 'metamuse/collection'
 require 'metamuse/association'
 require 'metamuse/services/echonest'
+require 'metamuse/services/freebase'
 
 class Metamuse
   autoload :Artist, 'metamuse/artist'
