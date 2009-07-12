@@ -3,7 +3,7 @@ class Metamuse
     extend Association
     has_many :albums, Album
 
-    attr_accessor :name, :echonest_id, :freebase_guid
+    attr_accessor :name, :echonest_id, :freebase_guid, :mbid
 
     def initialize(attrs={})
       attrs.each {|k,v| send(:"#{k}=", v)}

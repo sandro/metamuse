@@ -12,6 +12,7 @@ require 'metamuse/collection'
 require 'metamuse/association'
 require 'metamuse/services/echonest'
 require 'metamuse/services/freebase'
+require 'metamuse/services/music_brainz'
 
 class Metamuse
   autoload :Artist, 'metamuse/artist'

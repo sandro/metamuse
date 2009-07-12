@@ -2,7 +2,7 @@ class Metamuse
   class Track
     extend Association
     belongs_to :album, Album
-    attr_accessor :name, :freebase_id, :index
+    attr_accessor :name, :index, :freebase_id, :mbid
     alias number index
 
     def initialize(attrs={})
