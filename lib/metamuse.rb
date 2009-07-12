@@ -10,6 +10,7 @@ require 'arrayish'
 
 require 'metamuse/collection'
 require 'metamuse/association'
+require 'metamuse/services'
 require 'metamuse/services/echonest'
 require 'metamuse/services/freebase'
 require 'metamuse/services/music_brainz'
