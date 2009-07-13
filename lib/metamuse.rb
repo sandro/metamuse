@@ -5,6 +5,7 @@ require 'cgi'
 require 'httparty'
 
 require 'httparty_ext'
+require 'object_ext'
 require 'array_ext'
 require 'arrayish'
 
