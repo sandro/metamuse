@@ -20,7 +20,7 @@ class Metamuse
           Track.new :name => track['title'], :index => track_list.index(track), :mbid => track['id']
         end
 
-        Album.new album_data.merge :tracks => tracks
+        Album.new album_data.merge(:tracks => tracks)
       end
     end
   end
