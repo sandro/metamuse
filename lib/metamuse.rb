@@ -15,6 +15,7 @@ require 'metamuse/services'
 require 'metamuse/services/echonest'
 require 'metamuse/services/freebase'
 require 'metamuse/services/music_brainz'
+require 'metamuse/services/lastfm'
 
 class Metamuse
   autoload :Artist, 'metamuse/artist'
@@ -22,11 +23,16 @@ class Metamuse
   autoload :Track, 'metamuse/track'
 
   class << self
-    attr_reader :echonest_api_key
+    attr_reader :echonest_api_key, :lastfm_api_key
 
     def echonest_api_key=(key)
       @echonest_api_key = key
       Services::Echonest.api_key = echonest_api_key
+    end
+
+    def lastfm_api_key=(key)
+      @lastfm_api_key = key
+      Services::Lastfm.api_key = lastfm_api_key
     end
   end
 
