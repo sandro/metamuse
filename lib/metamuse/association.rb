@@ -19,6 +19,7 @@ class Metamuse
       end
 
       define_method("#{accessor}=") do |items|
+        send(accessor).clear
         send(accessor) << items
       end
     end

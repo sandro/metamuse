@@ -48,9 +48,12 @@ describe Metamuse::Association do
       @person.shoes.map {|s| s.class}.uniq.should == [TestShoe]
     end
 
-    it "appends shoes when setting the collection" do
-      @person.shoes.should_receive(:<<).with({:color => 'red'})
-      @person.shoes = {:color => 'red'}
+    it "clears old shoes when setting the collection" do
+      @person.shoes << {:color => 'blue'}
+      expect {
+        @person.shoes = {:color => 'red'}
+      }.to change{@person.shoes.first.color}.from('blue').to('red')
+      @person.shoes.size.should == 1
     end
   end
 
