@@ -4,7 +4,7 @@ class Metamuse
     extend Association
     has_many :tracks, Track
 
-    attr_accessor :name, :release_date, :freebase_id, :mbid
+    attr_accessor :name, :release_date, :freebase_id, :mbid, :rank
 
     def <=>(other)
       if rank
@@ -13,6 +13,7 @@ class Metamuse
         to_s <=> other.to_s
       end
     end
+
   end
 end
 
