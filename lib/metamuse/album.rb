@@ -1,12 +1,17 @@
 class Metamuse
   class Album
+    include InstanceInitialize
     extend Association
     has_many :tracks, Track
 
     attr_accessor :name, :release_date, :freebase_id, :mbid
 
-    def initialize(attrs={})
-      attrs.each {|k,v| send(:"#{k}=", v)}
+    def <=>(other)
+      if rank
+        rank <=> other.rank
+      else
+        to_s <=> other.to_s
+      end
     end
   end
 end

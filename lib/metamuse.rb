@@ -33,4 +33,10 @@ class Metamuse
   def self.find_artist(name)
     Services::Echonest.artist(name)
   end
+
+  module InstanceInitialize
+    def initialize(attrs={})
+      attrs.each {|k,v| instance_variable_set "@#{k}", v}
+    end
+  end
 end
