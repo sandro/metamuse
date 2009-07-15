@@ -31,10 +31,9 @@ describe Metamuse::Association do
     end
 
     it "creates a new shoe when not appending a TestShoe" do
-      shoe = TestShoe.new
-      TestShoe.should_receive(:new).with({:color => 'red'}).and_return(shoe)
-      @person.shoes << {:color => "red"}
-      @person.shoes.last.should == shoe
+      mock.proxy(TestShoe).new({:color => 'red'})
+      @person.shoes << {:color => 'red'}
+      @person.shoes.last.color == 'red'
     end
 
     it "appends a TestShoe" do
