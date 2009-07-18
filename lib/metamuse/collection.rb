@@ -1,4 +1,4 @@
-class Metamuse
+module Metamuse
   class Collection
     include ::Arrayish
     attr_reader :collection, :collection_class, :owner

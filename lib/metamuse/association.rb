@@ -1,4 +1,4 @@
-class Metamuse
+module Metamuse
   module Association
     def self.extended(base)
       class << base

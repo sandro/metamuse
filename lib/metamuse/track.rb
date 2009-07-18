@@ -1,4 +1,4 @@
-class Metamuse
+module Metamuse
   class Track
     include InstanceInitialize
     extend Association

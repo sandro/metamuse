@@ -1,4 +1,4 @@
-class Metamuse
+module Metamuse
   module Services
     module Service
       def has_api_key()

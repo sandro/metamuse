@@ -1,4 +1,4 @@
-class Metamuse
+module Metamuse
   module Services
     class MusicBrainz
       include HTTParty

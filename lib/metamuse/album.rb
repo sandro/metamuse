@@ -1,4 +1,4 @@
-class Metamuse
+module Metamuse
   class Album
     include InstanceInitialize
     extend Association

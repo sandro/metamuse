@@ -1,4 +1,4 @@
-class Metamuse
+module Metamuse
   class Artist
     include InstanceInitialize
     extend Association

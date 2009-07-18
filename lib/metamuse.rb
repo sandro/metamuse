@@ -17,7 +17,7 @@ require 'metamuse/services/freebase'
 require 'metamuse/services/music_brainz'
 require 'metamuse/services/lastfm'
 
-class Metamuse
+module Metamuse
   autoload :Artist, 'metamuse/artist'
   autoload :Album, 'metamuse/album'
   autoload :Track, 'metamuse/track'
