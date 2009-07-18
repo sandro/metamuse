@@ -33,7 +33,7 @@ module Metamuse
         albums.each do |album|
           data = {:name => CGI.unescapeHTML(album['name']), :release_date => album['release_date'], :freebase_id => album['freebase_id']}
           tracks = album['track']
-          data['tracks'] = tracks.map {|t| t.update 'name' => CGI.unescapeHTML(t['name'])}
+          data[:tracks] = tracks.map {|t| t.update 'name' => CGI.unescapeHTML(t['name'])}
           artist.albums << data
         end
         artist
