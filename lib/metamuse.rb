@@ -35,6 +35,10 @@ class Metamuse
       Services::Lastfm.api_key = lastfm_api_key
     end
 
+    def find_artist(name)
+      Services::Echonest.artist(name)
+    end
+
     private
 
     def api_keys
@@ -50,10 +54,6 @@ class Metamuse
         send("#{service}_api_key=", value)
       end
     end
-  end
-
-  def self.find_artist(name)
-    Services::Echonest.artist(name)
   end
 
   module InstanceInitialize
