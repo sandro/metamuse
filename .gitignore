@@ -3,3 +3,4 @@
 coverage
 rdoc
 pkg
+.api_keys.yml
