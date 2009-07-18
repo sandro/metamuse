@@ -4,7 +4,7 @@ class Metamuse
     extend Association
     has_many :tracks, Track
 
-    attr_accessor :name, :release_date, :freebase_id, :mbid, :rank
+    attr_accessor :name, :release_date, :freebase_id, :mbid, :rank, :images
 
     def <=>(other)
       if rank
