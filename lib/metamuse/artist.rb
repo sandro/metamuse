@@ -10,18 +10,23 @@ class Metamuse
       @tracks ||= albums.map{|a| a.tracks}.flatten
     end
 
-    def rank_albums!
-      return if albums.empty?
+    def enhance_albums!
+      return albums if albums.empty?
       self.albums = albums.map do |album|
-        album.rank = ranked_albums.detect{|a| a.name == album.name}.try(:rank)
+        lastfm_album = lastfm_albums.detect{|a| a.name == album.name}
+        if lastfm_album
+          album.rank = lastfm_album.rank
+          album.mbid = lastfm_album.mbid
+          album.images = lastfm_album.images
+        end
         album
       end.sort
     end
 
     private
 
-    def ranked_albums
-      @ranked_albums ||= Services::Lastfm.top_albums(name)
+    def lastfm_albums
+      @lastfm_albums ||= Services::Lastfm.top_albums(name)
     end
   end
 end

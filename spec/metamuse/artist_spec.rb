@@ -12,36 +12,58 @@ describe Metamuse::Artist do
     end
   end
 
-  describe "#rank_albums!" do
-    before do
-      subject.albums = [{:name => "Mild"}, {:name => 'Hot'}, {:name => 'Medium'}]
+  describe "#enhance_albums!" do
+    context "when albums exist" do
+      before do
+        @image = fake('image')
+        @lastfm_albums = [
+          Metamuse::Album.new(:name => 'Mild', :rank => 3, :mbid => 1),
+          Metamuse::Album.new(:name => 'Hot', :rank => 1, :mbid => 2, :images => [@image]),
+          Metamuse::Album.new(:name => 'Medium', :rank => 2, :mbid => 3)
+        ]
+        stub(subject).lastfm_albums { @lastfm_albums }
+        subject.albums = [{:name => "Mild"}, {:name => 'Hot'}, {:name => 'Medium'}]
+      end
+
+      it "uses albums from Last.fm" do
+        subject.enhance_albums!
+        subject.should have_received(:lastfm_albums).any_times
+      end
+
+      it "sets the album's mbid" do
+        subject.enhance_albums!.first.mbid.should == 2
+      end
+
+      it "sets the album's images collection" do
+        subject.enhance_albums!.first.images.should include(@image)
+      end
+
+      it "sets the album's rank" do
+        subject.enhance_albums!.first.rank.should == 1
+      end
+
+      context "rankings" do
+        it "sets rank to nil when the lastfm album is unranked" do
+          ranked = Metamuse::Album.new
+          stub(subject).lastfm_albums { [ranked] }
+          subject.enhance_albums!.first.rank.should be_nil
+        end
+
+        it "sorts based on rank" do
+          ranked = [Metamuse::Album.new(:name => 'Mild', :rank => 3), Metamuse::Album.new(:name => 'Hot', :rank => 1), Metamuse::Album.new(:name => 'Medium', :rank => 2)]
+          stub(subject).ranked_albums { ranked }
+          subject.enhance_albums!
+          subject.albums.map{|a| a.name}.should == %w(Hot Medium Mild)
+        end
+      end
     end
 
-    it "uses the #ranked_albums collection" do
-      ranked = Metamuse::Album.new(:name => 'Mild')
-      mock(subject).ranked_albums.any_times { [ranked] }
-      subject.rank_albums!
-    end
-
-    it "sets rank to nil when a ranked album cannot be found" do
-      ranked = Metamuse::Album.new
-      stub(subject).ranked_albums { [ranked] }
-      subject.rank_albums!
-      subject.albums.first.rank.should be_nil
-    end
-
-    it "sorts based on rank" do
-      ranked = [Metamuse::Album.new(:name => 'Mild', :rank => 3), Metamuse::Album.new(:name => 'Hot', :rank => 1), Metamuse::Album.new(:name => 'Medium', :rank => 2)]
-      stub(subject).ranked_albums { ranked }
-      subject.rank_albums!
-      subject.albums.map{|a| a.name}.should == %w(Hot Medium Mild)
-    end
-  end
-
-  describe "#ranked_albums" do
-    it "grabs ranked albums from Last.fm" do
-      mock(Metamuse::Services::Lastfm).top_albums('Mozart')
-      subject.send(:ranked_albums)
+    context "artist has no albums" do
+      it "returns albums if the artist has no albums" do
+        albums = []
+        mock(subject).albums.any_times { albums }
+        subject.enhance_albums!.should == albums
+      end
     end
   end
 end
