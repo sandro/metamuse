@@ -1,5 +1,5 @@
 class Array
   def self.insist(thing)
-    Array === thing ? thing : [thing]
+    thing.is_a?(Array) ? thing : [thing]
   end
 end
