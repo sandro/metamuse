@@ -23,6 +23,11 @@ module Metamuse
       end.sort
     end
 
+    def fetch_albums_and_tracks!
+      artist = Services::Freebase.artist(name)
+      self.albums = artist.albums
+    end
+
     private
 
     def lastfm_albums

@@ -66,4 +66,23 @@ describe Metamuse::Artist do
       end
     end
   end
+
+  describe "#fetch_albums_and_tracks!" do
+    it "fetches artist information from Freebase" do
+      mock.proxy(Metamuse::Services::Freebase).artist("Mozart") do |freebase_artist|
+        mock(subject).albums=(freebase_artist.albums)
+        freebase_artist
+      end
+      subject.fetch_albums_and_tracks!
+    end
+
+    it "assigns the tracks that were retrieved from Freebase" do
+      freebase_artist = nil
+      stub.proxy(Metamuse::Services::Freebase).artist('Mozart') do |fba|
+        freebase_artist = fba
+      end
+      subject.fetch_albums_and_tracks!
+      subject.tracks.should == freebase_artist.tracks
+    end
+  end
 end
