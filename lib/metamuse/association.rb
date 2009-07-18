@@ -2,13 +2,15 @@ module Metamuse
   module Association
     def self.extended(base)
       class << base
-        attr_accessor :belongs_to_set
+        attr_accessor :has_many_set, :belongs_to_set
       end
-      base.belongs_to_set = {}
+      base.belongs_to_set = base.has_many_set = {}
       base.send :include, InstanceMethods
     end
 
     def has_many(accessor, klass)
+      has_many_set.merge! klass => accessor
+
       define_method(accessor) do
         ivar = "@#{accessor}"
         if val = instance_variable_get(ivar)

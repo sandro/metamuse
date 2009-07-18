@@ -58,7 +58,13 @@ module Metamuse
 
   module InstanceInitialize
     def initialize(attrs={})
-      attrs.each {|k,v| instance_variable_set "@#{k}", v}
+      attrs.each do |k,v|
+        if self.class.has_many_set.values.include?(k)
+          send "#{k}=", v
+        else
+          instance_variable_set "@#{k}", v
+        end
+      end
     end
   end
 end
