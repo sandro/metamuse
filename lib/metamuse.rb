@@ -34,6 +34,22 @@ class Metamuse
       @lastfm_api_key = key
       Services::Lastfm.api_key = lastfm_api_key
     end
+
+    private
+
+    def api_keys
+      if File.exists?(name=".api_keys.yml")
+        YAML.load_file name
+      else
+        {}
+      end
+    end
+
+    def register_api_keys
+      api_keys.each do |service, value|
+        send("#{service}_api_key=", value)
+      end
+    end
   end
 
   def self.find_artist(name)
