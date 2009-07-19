@@ -3,7 +3,6 @@ require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 describe "Metamuse" do
   describe "integration" do
     it "finds coldplay" do
-      FakeWeb.register_uri('http://developer.echonest.com/api/search_artists?query=coldplay&version=3&api_key=TEST', :file => web_fixture('echonest_coldplay_search.xml'))
       Metamuse.echonest_api_key = "TEST"
       Metamuse.find_artist('coldplay').name.should == 'Coldplay'
     end

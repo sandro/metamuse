@@ -1,0 +1,938 @@
+--- !ruby/object:FakeWeb::Fixture 
+file_name: GET_www.freebase.com-api-service-mqlread_60ee2bd.fixture
+method: :get
+path: ./spec/metamuse/services/../../web_fixtures
+response: !ruby/object:Net::HTTPOK 
+  body: |-
+    {
+      "code": "/api/status/ok",
+      "result": {
+        "album": [
+          {
+            "/common/topic/image": [],
+            "id": "/en/clocks_remixes",
+            "name": "Clocks Remixes",
+            "release_date": null,
+            "release_type": "EP",
+            "track": [
+              {
+                "index": 0,
+                "name": "Clocks (R\u00f6yksopp Trembling Heart remix)"
+              },
+              {
+                "index": 1,
+                "name": "Clocks (R\u00f6yksopp Instrumental Trembling Heart remix)"
+              },
+              {
+                "index": 2,
+                "name": "God Put a Smile Upon Your Face (Def Inc. remix)"
+              }
+            ]
+          },
+          {
+            "/common/topic/image": [],
+            "id": "/en/clocks_11_05_2002_ahoy_rotterdam",
+            "name": "Clocks: 11-05-2002: Ahoy, Rotterdam",
+            "release_date": null,
+            "release_type": "EP",
+            "track": [
+              {
+                "index": 0,
+                "name": "Clocks (live)"
+              },
+              {
+                "index": 1,
+                "name": "In My Place"
+              },
+              {
+                "index": 2,
+                "name": "Everything's Not Lost (live)"
+              },
+              {
+                "index": 3,
+                "name": "Yellow (live)"
+              },
+              {
+                "index": 4,
+                "name": "Clocks"
+              },
+              {
+                "index": 5,
+                "name": "Trouble (live)"
+              },
+              {
+                "index": 6,
+                "name": "The Scientist (live)"
+              },
+              {
+                "index": 7,
+                "name": "Green Eyes / Mooie Ellebogen (live)"
+              },
+              {
+                "index": 8,
+                "name": "Clocks (edit)"
+              },
+              {
+                "index": 9,
+                "name": "Politik (live)"
+              },
+              {
+                "index": 10,
+                "name": "Shiver (live)"
+              },
+              {
+                "index": 11,
+                "name": "Daylight (live)"
+              }
+            ]
+          },
+          {
+            "/common/topic/image": [],
+            "id": "/guid/9202a8c04000641f800000000304023c",
+            "name": "Don't Panic",
+            "release_date": null,
+            "release_type": "Single",
+            "track": [
+              {
+                "index": 0,
+                "name": "Don't Panic"
+              },
+              {
+                "index": 1,
+                "name": "Spies (live, 2000: Lowlands)"
+              },
+              {
+                "index": 2,
+                "name": "Bigger Stronger (live, 2000: Lowlands)"
+              },
+              {
+                "index": 3,
+                "name": "Yellow (live, 2000: Lowlands)"
+              }
+            ]
+          },
+          {
+            "/common/topic/image": [],
+            "id": "/guid/9202a8c04000641f8000000003040304",
+            "name": "God Put a Smile Upon Your Face",
+            "release_date": null,
+            "release_type": "Single",
+            "track": [
+              {
+                "index": 0,
+                "name": "God Put a Smile Upon Your Face"
+              },
+              {
+                "index": 1,
+                "name": "Crests of Waves"
+              },
+              {
+                "index": 2,
+                "name": "Animals"
+              },
+              {
+                "index": 3,
+                "name": "Murder"
+              },
+              {
+                "index": 4,
+                "name": "In My Place (live)"
+              },
+              {
+                "index": 5,
+                "name": "Yellow (live)"
+              }
+            ]
+          },
+          {
+            "/common/topic/image": [],
+            "id": "/guid/9202a8c04000641f80000000030405fd",
+            "name": "The Remixes",
+            "release_date": null,
+            "release_type": "Remix",
+            "track": [
+              {
+                "index": 0,
+                "name": "Clocks (Airplay remix)"
+              },
+              {
+                "index": 1,
+                "name": "Clocks (R\u00f6yksopp Trembling Heart remix)"
+              },
+              {
+                "index": 2,
+                "name": "Yellow (The Alpha remix)"
+              },
+              {
+                "index": 3,
+                "name": "Clocks (Cosmos remix)"
+              },
+              {
+                "index": 4,
+                "name": "Clocks (Planet Rockers remix)"
+              },
+              {
+                "index": 5,
+                "name": "Clocks (PsyClone remix)"
+              },
+              {
+                "index": 6,
+                "name": "Spies (Nikolai Levey remix)"
+              },
+              {
+                "index": 7,
+                "name": "Clocks (Illicit White Label remix)"
+              },
+              {
+                "index": 8,
+                "name": "Clocks (Live R\u00f6yksopp remix)"
+              },
+              {
+                "index": 9,
+                "name": "Clocks (Yaron Deephouse remix)"
+              },
+              {
+                "index": 10,
+                "name": "God Put a Smile Upon Your Face (Def Inc. remix)"
+              },
+              {
+                "index": 11,
+                "name": "Clocks (Riva remix)"
+              },
+              {
+                "index": 12,
+                "name": "Clocks (R\u00f6yksopp Trembling Heart instrumental remix)"
+              }
+            ]
+          },
+          {
+            "/common/topic/image": [
+              {
+                "id": "/wikipedia/images/en_id/17155168"
+              }
+            ],
+            "id": "/en/viva_la_vida_or_death_and_all_his_friends",
+            "name": "Viva la Vida or Death and All His Friends",
+            "release_date": "2008-06-17",
+            "release_type": null,
+            "track": [
+              {
+                "index": 0,
+                "name": "Cemeteries of London"
+              },
+              {
+                "index": 1,
+                "name": "Lost!"
+              },
+              {
+                "index": 2,
+                "name": "42"
+              },
+              {
+                "index": 3,
+                "name": "Lovers in Japan/Reign of Love"
+              },
+              {
+                "index": null,
+                "name": "Viva la Vida"
+              },
+              {
+                "index": null,
+                "name": "Life in Technicolor"
+              },
+              {
+                "index": null,
+                "name": "Yes!/Chinese Sleep Chant"
+              },
+              {
+                "index": null,
+                "name": "Strawberry Swing"
+              },
+              {
+                "index": null,
+                "name": "Violet Hill"
+              },
+              {
+                "index": null,
+                "name": "Lost? (acoustic)"
+              },
+              {
+                "index": null,
+                "name": "Death And All His Friends"
+              }
+            ]
+          },
+          {
+            "/common/topic/image": [
+              {
+                "id": "/wikipedia/images/en_id/3283256"
+              }
+            ],
+            "id": "/guid/9202a8c04000641f80000000007da85e",
+            "name": "Talk",
+            "release_date": "2005-12-09",
+            "release_type": "Single",
+            "track": [
+              {
+                "index": 0,
+                "name": "Talk (album version)"
+              },
+              {
+                "index": 1,
+                "name": "Square One (live in Holland)"
+              },
+              {
+                "index": 2,
+                "name": "Clocks (live in Holland)"
+              }
+            ]
+          },
+          {
+            "/common/topic/image": [],
+            "id": "/guid/9202a8c04000641f8000000003040334",
+            "name": "Fix You",
+            "release_date": "2005-09-05",
+            "release_type": "Single",
+            "track": [
+              {
+                "index": 0,
+                "name": "Fix You (edit)"
+              },
+              {
+                "index": 1,
+                "name": "The World Turned Upside Down"
+              },
+              {
+                "index": 2,
+                "name": "Pour Me (live at the Hollywood Bowl)"
+              }
+            ]
+          },
+          {
+            "/common/topic/image": [
+              {
+                "id": "/wikipedia/images/en_id/1693480"
+              }
+            ],
+            "id": "/en/x_y",
+            "name": "X&amp;Y",
+            "release_date": "2005-06-01",
+            "release_type": null,
+            "track": [
+              {
+                "index": 0,
+                "name": "Things I Don't Understand"
+              },
+              {
+                "index": 1,
+                "name": "Proof"
+              },
+              {
+                "index": 2,
+                "name": "The World Turned Upside Down"
+              },
+              {
+                "index": 3,
+                "name": "Pour Me (live at the Hollywood Bowl)"
+              },
+              {
+                "index": 4,
+                "name": "Sleeping Sun"
+              },
+              {
+                "index": 5,
+                "name": "Gravity"
+              },
+              {
+                "index": 6,
+                "name": "Square One"
+              },
+              {
+                "index": 7,
+                "name": "What If"
+              },
+              {
+                "index": 8,
+                "name": "White Shadows"
+              },
+              {
+                "index": 9,
+                "name": "Fix You"
+              },
+              {
+                "index": 10,
+                "name": "Talk"
+              },
+              {
+                "index": 11,
+                "name": "X&amp;Y"
+              },
+              {
+                "index": 12,
+                "name": "Speed of Sound"
+              },
+              {
+                "index": 13,
+                "name": "A Message"
+              },
+              {
+                "index": 14,
+                "name": "Low"
+              },
+              {
+                "index": 15,
+                "name": "The Hardest Part"
+              },
+              {
+                "index": 16,
+                "name": "Swallowed in the Sea"
+              },
+              {
+                "index": 17,
+                "name": "Twisted Logic"
+              },
+              {
+                "index": 18,
+                "name": "'til Kingdom Come"
+              }
+            ]
+          },
+          {
+            "/common/topic/image": [],
+            "id": "/guid/9202a8c04000641f80000000030402b6",
+            "name": "Speed of Sound",
+            "release_date": "2005-05-23",
+            "release_type": "Single",
+            "track": [
+              {
+                "index": 0,
+                "name": "Speed of Sound (radio edit)"
+              },
+              {
+                "index": 1,
+                "name": "Speed of Sound (album version)"
+              }
+            ]
+          },
+          {
+            "/common/topic/image": [],
+            "id": "/guid/9202a8c04000641f80000000030405cb",
+            "name": "Talk",
+            "release_date": "2005",
+            "release_type": "Single",
+            "track": [
+              {
+                "index": 0,
+                "name": "God Put a Smile Upon Your Face (live in Holland)"
+              },
+              {
+                "index": 1,
+                "name": "Swallowed in the Sea (live in Holland)"
+              },
+              {
+                "index": 2,
+                "name": "Talk (radio edit)"
+              }
+            ]
+          },
+          {
+            "/common/topic/image": [
+              {
+                "id": "/wikipedia/images/en_id/1043064"
+              }
+            ],
+            "id": "/en/live_2003",
+            "name": "Live 2003",
+            "release_date": "2003-11-04",
+            "release_type": "Live Album",
+            "track": [
+              {
+                "index": 0,
+                "name": "Politik"
+              },
+              {
+                "index": 1,
+                "name": "God Put a Smile Upon Your Face"
+              },
+              {
+                "index": 2,
+                "name": "A Rush of Blood to the Head"
+              },
+              {
+                "index": 3,
+                "name": "One I Love"
+              },
+              {
+                "index": 4,
+                "name": "See You Soon"
+              },
+              {
+                "index": 5,
+                "name": "Shiver"
+              },
+              {
+                "index": 6,
+                "name": "Everything's Not Lost"
+              },
+              {
+                "index": 7,
+                "name": "Moses"
+              },
+              {
+                "index": 8,
+                "name": "Yellow"
+              },
+              {
+                "index": 9,
+                "name": "Clocks"
+              },
+              {
+                "index": 10,
+                "name": "In My Place"
+              },
+              {
+                "index": 11,
+                "name": "Amsterdam"
+              }
+            ]
+          },
+          {
+            "/common/topic/image": [],
+            "id": "/en/clocks_yellow",
+            "name": "Clocks / Yellow",
+            "release_date": "2003-06-24",
+            "release_type": "Single",
+            "track": [
+              {
+                "index": 0,
+                "name": "Clocks"
+              },
+              {
+                "index": 1,
+                "name": "Yellow (live)"
+              }
+            ]
+          },
+          {
+            "/common/topic/image": [],
+            "id": "/guid/9202a8c04000641f800000000304027d",
+            "name": "Clocks",
+            "release_date": "2003-03-24",
+            "release_type": "Single",
+            "track": [
+              {
+                "index": 0,
+                "name": "Clocks"
+              },
+              {
+                "index": 1,
+                "name": "Politik (live in Rotterdam Nov 5 2002)"
+              },
+              {
+                "index": 2,
+                "name": "Shiver (live in Rotterdam Nov 5 2002)"
+              },
+              {
+                "index": 3,
+                "name": "Daylight (live in Rotterdam Nov 5 2002)"
+              }
+            ]
+          },
+          {
+            "/common/topic/image": [],
+            "id": "/guid/9202a8c04000641f80000000030403d4",
+            "name": "Clocks",
+            "release_date": "2003",
+            "release_type": "EP",
+            "track": [
+              {
+                "index": 0,
+                "name": "Clocks (edit)"
+              },
+              {
+                "index": 1,
+                "name": "Crests of Waves"
+              },
+              {
+                "index": 2,
+                "name": "Animals"
+              },
+              {
+                "index": 3,
+                "name": "Murder"
+              },
+              {
+                "index": 4,
+                "name": "In My Place (live)"
+              },
+              {
+                "index": 5,
+                "name": "Yellow (live)"
+              }
+            ]
+          },
+          {
+            "/common/topic/image": [],
+            "id": "/guid/9202a8c04000641f8000000003040591",
+            "name": "The Scientist",
+            "release_date": "2002-11-11",
+            "release_type": "Single",
+            "track": [
+              {
+                "index": 0,
+                "name": "The Scientist"
+              },
+              {
+                "index": 1,
+                "name": "1.36"
+              },
+              {
+                "index": 2,
+                "name": "I Ran Away"
+              }
+            ]
+          },
+          {
+            "/common/topic/image": [
+              {
+                "id": "/wikipedia/images/en_id/7543719"
+              }
+            ],
+            "id": "/en/a_rush_of_blood_to_the_head",
+            "name": "A Rush of Blood to the Head",
+            "release_date": "2002-08-12",
+            "release_type": null,
+            "track": [
+              {
+                "index": 0,
+                "name": "Politik"
+              },
+              {
+                "index": 1,
+                "name": "In My Place"
+              },
+              {
+                "index": 2,
+                "name": "God Put a Smile upon Your Face"
+              },
+              {
+                "index": 3,
+                "name": "The Scientist"
+              },
+              {
+                "index": 4,
+                "name": "Clocks"
+              },
+              {
+                "index": 5,
+                "name": "Daylight"
+              },
+              {
+                "index": 6,
+                "name": "Green Eyes"
+              },
+              {
+                "index": 7,
+                "name": "Warning Sign"
+              },
+              {
+                "index": 8,
+                "name": "A Whisper"
+              },
+              {
+                "index": 9,
+                "name": "A Rush of Blood to the Head"
+              },
+              {
+                "index": 10,
+                "name": "Amsterdam"
+              }
+            ]
+          },
+          {
+            "/common/topic/image": [],
+            "id": "/guid/9202a8c04000641f80000000030404c5",
+            "name": "In My Place",
+            "release_date": "2002",
+            "release_type": "Single",
+            "track": [
+              {
+                "index": 0,
+                "name": "In My Place"
+              },
+              {
+                "index": 1,
+                "name": "One I Love"
+              },
+              {
+                "index": 2,
+                "name": "I Bloom Blaum"
+              }
+            ]
+          },
+          {
+            "/common/topic/image": [],
+            "id": "/guid/9202a8c04000641f80000000030404b0",
+            "name": "Trouble: Norwegian Live EP: Rockefeller Music Hall, Oslo",
+            "release_date": "2001",
+            "release_type": "EP",
+            "track": [
+              {
+                "index": 0,
+                "name": "Trouble"
+              },
+              {
+                "index": 1,
+                "name": "Shiver"
+              },
+              {
+                "index": 2,
+                "name": "Sparks"
+              },
+              {
+                "index": 3,
+                "name": "Yellow"
+              },
+              {
+                "index": 4,
+                "name": "Everything's Not Lost"
+              }
+            ]
+          },
+          {
+            "/common/topic/image": [
+              {
+                "id": "/wikipedia/images/en_id/1338953"
+              }
+            ],
+            "id": "/en/parachutes",
+            "name": "Parachutes",
+            "release_date": "2000-07-10",
+            "release_type": null,
+            "track": [
+              {
+                "index": 0,
+                "name": "Don't Panic"
+              },
+              {
+                "index": 1,
+                "name": "Shiver"
+              },
+              {
+                "index": 2,
+                "name": "Spies"
+              },
+              {
+                "index": 3,
+                "name": "Sparks"
+              },
+              {
+                "index": 4,
+                "name": "Yellow"
+              },
+              {
+                "index": 5,
+                "name": "Trouble"
+              },
+              {
+                "index": 6,
+                "name": "Parachutes"
+              },
+              {
+                "index": 7,
+                "name": "High Speed"
+              },
+              {
+                "index": 8,
+                "name": "We Never Change"
+              },
+              {
+                "index": 9,
+                "name": "Everything's Not Lost / Life Is for Living"
+              }
+            ]
+          },
+          {
+            "/common/topic/image": [],
+            "id": "/guid/9202a8c04000641f80000000030404d4",
+            "name": "Shiver",
+            "release_date": "2000",
+            "release_type": "Single",
+            "track": [
+              {
+                "index": 0,
+                "name": "Shiver"
+              },
+              {
+                "index": 1,
+                "name": "For You"
+              },
+              {
+                "index": 2,
+                "name": "Careful Where You Stand"
+              }
+            ]
+          },
+          {
+            "/common/topic/image": [],
+            "id": "/guid/9202a8c04000641f800000000304036b",
+            "name": "Trouble",
+            "release_date": "2000",
+            "release_type": "Single",
+            "track": [
+              {
+                "index": 0,
+                "name": "Trouble"
+              },
+              {
+                "index": 1,
+                "name": "Brothers and Sisters"
+              },
+              {
+                "index": 2,
+                "name": "Shiver (Jo Whiley Lunchtime Social)"
+              }
+            ]
+          },
+          {
+            "/common/topic/image": [],
+            "id": "/guid/9202a8c04000641f80000000030403e9",
+            "name": "Yellow",
+            "release_date": "2000",
+            "release_type": "Single",
+            "track": [
+              {
+                "index": 0,
+                "name": "Yellow"
+              },
+              {
+                "index": 1,
+                "name": "Help Is Round the Corner"
+              },
+              {
+                "index": 2,
+                "name": "No More Keeping My Feet on the Ground"
+              }
+            ]
+          },
+          {
+            "/common/topic/image": [],
+            "id": "/guid/9202a8c04000641f8000000003040346",
+            "name": "The Blue Room EP",
+            "release_date": "1999-10-25",
+            "release_type": "EP",
+            "track": [
+              {
+                "index": 0,
+                "name": "Bigger Stronger"
+              },
+              {
+                "index": 1,
+                "name": "Don't Panic"
+              },
+              {
+                "index": 2,
+                "name": "See You Soon"
+              },
+              {
+                "index": 3,
+                "name": "High Speed"
+              },
+              {
+                "index": 4,
+                "name": "Such a Rush"
+              }
+            ]
+          },
+          {
+            "/common/topic/image": [],
+            "id": "/guid/9202a8c04000641f800000000304037c",
+            "name": "Brothers &amp; Sisters EP",
+            "release_date": "1999-04",
+            "release_type": "EP",
+            "track": [
+              {
+                "index": 0,
+                "name": "Brothers &amp; Sisters"
+              },
+              {
+                "index": 1,
+                "name": "Easy to Please"
+              },
+              {
+                "index": 2,
+                "name": "Only Superstition"
+              }
+            ]
+          },
+          {
+            "/common/topic/image": [],
+            "id": "/guid/9202a8c04000641f800000000304031a",
+            "name": "Safety EP",
+            "release_date": "1998-05-18",
+            "release_type": "EP",
+            "track": [
+              {
+                "index": 0,
+                "name": "Parachutes"
+              },
+              {
+                "index": 1,
+                "name": "Bigger Stronger"
+              },
+              {
+                "index": 2,
+                "name": "No More Keeping My Feet on the Ground"
+              },
+              {
+                "index": 3,
+                "name": "Such a Rush"
+              }
+            ]
+          }
+        ],
+        "id": "/en/coldplay",
+        "name": "Coldplay",
+        "type": "/music/artist"
+      },
+      "status": "200 OK",
+      "transaction_id": "cache;cache02.p01.sjc1:8101;2009-07-01T18:06:01Z;0010"
+    }
+  body_exist: true
+  code: "200"
+  header: 
+    vary: 
+    - Accept-Encoding
+    cache-control: 
+    - public, max-age=1, s-maxage=1, maxage-vary-cookie="3600|mwLastWriteTime"
+    last-modified: 
+    - Wed, 01-Jul-2009 17:51:57 GMT
+    connection: 
+    - keep-alive
+    x-cache: 
+    - MISS from cache02.p01.sjc1.metaweb.com
+    expires: 
+    - Wed, 01-Jul-2009 18:06:02 GMT
+    content-type: 
+    - text/plain; charset=utf-8
+    etag: 
+    - a2b70447c8d529b49e6b075a89d88815
+    date: 
+    - Wed, 01 Jul 2009 18:06:01 GMT
+    x-metaweb-cost: 
+    - cc=0.007, ch=1.0, cm=0.0, cm+h=1.0, cr=1.0, cw=0.0, dt=0.007, mcs=0.0, mcu=0.0, nvcsw=2, tm=0.0, utime=0.007
+    x-metaweb-success: 
+    - 1/1
+    server: 
+    - Apache
+    content-length: 
+    - "20875"
+    age: 
+    - "844"
+    x-metaweb-tid: 
+    - cache;cache02.p01.sjc1:8101;2009-07-01T18:06:01Z;0010
+  http_version: "1.0"
+  message: OK
+  read: true
+  socket: 
+uri: http://www.freebase.com:80/api/service/mqlread?query=%7B%22query%22%3A%20%7B%22album%22%3A%20%5B%7B%20%22id%22%3A%20null%2C%20%22name%22%3A%20null%2C%20%22track%22%3A%20%5B%7B%20%22name%22%3A%20null%2C%20%22index%22%3A%20null%2C%20%22sort%22%3A%20%22index%22%20%7D%5D%2C%20%22release_date%22%3A%20null%2C%20%22release_type%22%3A%20null%2C%20%22sort%22%3A%20%22-release_date%22%2C%20%22%2Fcommon%2Ftopic%2Fimage%22%3A%20%5B%7B%20%22id%22%3A%20null%2C%20%22optional%22%3A%20true%2C%20%22limit%22%3A%203%20%7D%5D%20%7D%5D%2C%20%22id%22%3A%20null%2C%20%22name%22%3A%20%22coldplay%22%2C%20%22type%22%3A%20%22%2Fmusic%2Fartist%22%7D%7D

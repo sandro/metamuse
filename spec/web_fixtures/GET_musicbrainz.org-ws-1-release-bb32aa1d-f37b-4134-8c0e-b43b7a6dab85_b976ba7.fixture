@@ -1,0 +1,26 @@
+--- !ruby/object:FakeWeb::Fixture 
+file_name: GET_musicbrainz.org-ws-1-release-bb32aa1d-f37b-4134-8c0e-b43b7a6dab85_b976ba7.fixture
+method: :get
+path: /Users/santuri/Code/Ruby/metamuse/spec/web_fixtures
+response: !ruby/object:Net::HTTPOK 
+  body: <?xml version="1.0" encoding="UTF-8"?><metadata xmlns="http://musicbrainz.org/ns/mmd-1.0#" xmlns:ext="http://musicbrainz.org/ns/ext-1.0#"><release id="bb32aa1d-f37b-4134-8c0e-b43b7a6dab85" type="Album Official" ><title>X&amp;Y</title><text-representation language="ENG" script="Latn"/><asin>B000AU1NY2</asin><track-list><track id="3424956a-8f57-4da7-b249-bc639e226093"><title>Square One</title><duration>287000</duration></track><track id="9bb6271e-4be2-4fa4-b473-398b3db19505"><title>What If</title><duration>297000</duration></track><track id="9faa00d6-402f-4940-bf45-9506d555040f"><title>White Shadows</title><duration>328000</duration></track><track id="b4ded6ef-43e4-4624-9227-030e8821d481"><title>Fix You</title><duration>294000</duration></track><track id="d58f99c7-d392-4e08-a7df-158c1c270704"><title>Talk</title><duration>311000</duration></track><track id="87bcc70a-c112-491a-a756-949cc0c868af"><title>X&amp;Y</title><duration>274000</duration></track><track id="37fdd9e0-1491-45c2-9fdc-b96c558628fc"><title>Speed of Sound</title><duration>288000</duration></track><track id="255d3d30-35be-4d04-a2b8-94d44f250a10"><title>A Message</title><duration>285000</duration></track><track id="39e76f5c-f872-4306-86c0-becffbe5cbf9"><title>Low</title><duration>332000</duration></track><track id="10990f80-741b-434b-891a-e47752e6a6b3"><title>The Hardest Part</title><duration>265000</duration></track><track id="7c3f859d-ac4e-4663-849d-e5fd9769c846"><title>Swallowed in the Sea</title><duration>238000</duration></track><track id="1eb87a18-3e22-46dc-8b54-401c667908fd"><title>Twisted Logic</title><duration>301000</duration></track><track id="4bacf4f1-bad6-4e39-81d8-7397ca851043"><title>Til Kingdom Come / Pour Me (live)</title><duration>582000</duration></track></track-list></release></metadata>
+  body_exist: true
+  code: "200"
+  header: 
+    connection: 
+    - close
+    via: 
+    - 1.1 musicbrainz.org
+    content-type: 
+    - text/xml; charset=utf-8
+    date: 
+    - Sun, 12 Jul 2009 08:51:17 GMT
+    server: 
+    - Apache/1.3.41 (Unix) mod_perl/1.30
+    content-length: 
+    - "1797"
+  http_version: "1.1"
+  message: OK
+  read: true
+  socket: 
+uri: http://musicbrainz.org:80/ws/1/release/bb32aa1d-f37b-4134-8c0e-b43b7a6dab85/?type=xml&inc=tracks

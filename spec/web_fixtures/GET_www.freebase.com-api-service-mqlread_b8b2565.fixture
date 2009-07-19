@@ -1,0 +1,107 @@
+--- !ruby/object:FakeWeb::Fixture 
+file_name: GET_www.freebase.com-api-service-mqlread_b8b2565.fixture
+method: :get
+path: /Users/santuri/Code/Ruby/metamuse/spec/web_fixtures
+response: !ruby/object:Net::HTTPOK 
+  body: |-
+    {
+      "code": "/api/status/ok",
+      "result": {
+        "album": [
+          {
+            "/common/topic/image": [],
+            "id": "/guid/9202a8c04000641f800000000383c6ab",
+            "name": "moZart",
+            "release_date": "1993",
+            "release_type": null,
+            "track": [
+              {
+                "index": 0,
+                "name": "Speed Train"
+              },
+              {
+                "index": 1,
+                "name": "I Fly"
+              },
+              {
+                "index": 2,
+                "name": "Romance O' Blu"
+              },
+              {
+                "index": 3,
+                "name": "The Shoe"
+              },
+              {
+                "index": 4,
+                "name": "Hope and Glory"
+              },
+              {
+                "index": 5,
+                "name": "The Young Man Years"
+              },
+              {
+                "index": 6,
+                "name": "Fortress Around Your Heart"
+              },
+              {
+                "index": 7,
+                "name": "Static DJ"
+              },
+              {
+                "index": 8,
+                "name": "Three Strikes Again"
+              },
+              {
+                "index": 9,
+                "name": "Sea Shells"
+              },
+              {
+                "index": 10,
+                "name": "Enemies"
+              }
+            ]
+          }
+        ],
+        "id": "/guid/9202a8c04000641f800000000383c6cb",
+        "name": "moZart",
+        "type": "/music/artist"
+      },
+      "status": "200 OK",
+      "transaction_id": "cache;cache02.p01.sjc1:8101;2009-07-18T05:11:39Z;0002"
+    }
+  body_exist: true
+  code: "200"
+  header: 
+    vary: 
+    - Accept-Encoding
+    cache-control: 
+    - public, max-age=1, s-maxage=1, maxage-vary-cookie="3600|mwLastWriteTime"
+    last-modified: 
+    - Sat, 18-Jul-2009 05:11:39 GMT
+    connection: 
+    - keep-alive
+    x-cache: 
+    - MISS from cache02.p01.sjc1.metaweb.com
+    expires: 
+    - Sat, 18-Jul-2009 05:11:40 GMT
+    content-type: 
+    - text/plain; charset=utf-8
+    etag: 
+    - 44e4b06899c751decf0f7c7a521873e0
+    date: 
+    - Sat, 18 Jul 2009 05:11:39 GMT
+    x-metaweb-cost: 
+    - cc=0.004, ch=0.0, cm=1.0, cm+h=1.0, cr=1.0, cw=1.0, dr=1862, dt=0.021, dw=0, gqr=0, in=562, ir=3, iw=0, mcs=0.0, mcu=0.004, mr=1.0, nivcsw=10, nreqs=2, nvcsw=5, pf=0, pr=4, te=0.009, tf=0.00854396820068, tg=0.0077440738678, tm=0.017, tr=0.008, ts=0.0, tu=0.008, utime=0.004, va=961
+    x-metaweb-success: 
+    - 1/1
+    server: 
+    - Apache
+    content-length: 
+    - "1430"
+    x-metaweb-tid: 
+    - cache;cache02.p01.sjc1:8101;2009-07-18T05:11:39Z;0002
+  http_version: "1.0"
+  message: OK
+  read: true
+  socket: 
+uri: http://www.freebase.com:80/api/service/mqlread?query=%7B%22query%22%3A%20%7B%22album%22%3A%20%5B%7B%20%22id%22%3A%20null%2C%20%22name%22%3A%20null%2C%20%22track%22%3A%20%5B%7B%20%22name%22%3A%20null%2C%20%22index%22%3A%20null%2C%20%22sort%22%3A%20%22index%22%20%7D%5D%2C%20%22release_date%22%3A%20null%2C%20%22release_type%22%3A%20null%2C%20%22sort%22%3A%20%22-release_date%22%2C%20%22%2Fcommon%2Ftopic%2Fimage%22%3A%20%5B%7B%20%22id%22%3A%20null%2C%20%22optional%22%3A%20true%2C%20%22limit%22%3A%203%20%7D%5D%20%7D%5D%2C%20%22id%22%3A%20null%2C%20%22name%22%3A%20%22Mozart%22%2C%20%22type%22%3A%20%22%2Fmusic%2Fartist%22%7D%7D

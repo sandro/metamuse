@@ -1,0 +1,36 @@
+--- !ruby/object:FakeWeb::Fixture 
+file_name: GET_developer.echonest.com-api-search_artists_17a9da1.fixture
+method: :get
+path: /Users/santuri/Code/Ruby/metamuse/spec/web_fixtures
+response: !ruby/object:Net::HTTPOK 
+  body: |-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <response version="3"><status><code>1</code><message>Invalid API key</message></status><query><parameter name="api_key">TEST</parameter><parameter name="query">coldplay</parameter><parameter name="exact">N</parameter><parameter name="sounds_like">Y</parameter><parameter name="rows">15</parameter></query></response>
+  body_exist: true
+  code: "200"
+  header: 
+    vary: 
+    - Accept-Encoding
+    cache-control: 
+    - max-age=0
+    last-modified: 
+    - Sun, 12 Jul 2009 08:51:18 GMT
+    connection: 
+    - close
+    expires: 
+    - Sun, 12 Jul 2009 08:51:18 GMT
+    content-type: 
+    - text/xml; charset=utf-8
+    etag: 
+    - "\"009fc576f34f8bcdef29d743a855a3ab\""
+    date: 
+    - Sun, 12 Jul 2009 08:51:18 GMT
+    server: 
+    - Apache/2.2.9 (Debian) PHP/5.2.6-1+lenny3 with Suhosin-Patch mod_python/3.3.1 Python/2.5.2 mod_wsgi/2.3
+    transfer-encoding: 
+    - chunked
+  http_version: "1.1"
+  message: OK
+  read: true
+  socket: 
+uri: http://developer.echonest.com:80/api/search_artists?query=coldplay&version=3&api_key=TEST
