@@ -18,7 +18,8 @@ module Metamuse
       def self.build_albums(response)
         album_data = response['lfm']['topalbums']['album']
         album_data.map do |data|
-          Album.new :name => data['name'], :mbid => data['mbid'], :rank => data['rank'], :images => data['image']
+          images = data['image'].map {|location| Image.new location}
+          Album.new :name => data['name'], :mbid => data['mbid'], :rank => data['rank'], :images => images
         end
       end
     end
