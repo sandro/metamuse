@@ -1,6 +1,6 @@
 module Metamuse
   module Services
-    class Lastfm
+    module Lastfm
       extend Service
       include HTTParty
       base_uri 'http://ws.audioscrobbler.com/2.0/'
