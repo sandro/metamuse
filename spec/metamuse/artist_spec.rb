@@ -3,6 +3,17 @@ require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 describe Metamuse::Artist do
   subject { Metamuse::Artist.new :name => 'Mozart' }
 
+  describe ".build_artist" do
+    subject { Metamuse::Artist }
+    it "gets and enhances freebase artist information" do
+      mock.proxy(Metamuse::Services::Freebase).artist('Mozart') do |artist|
+        mock(artist).enhance_albums!
+        artist
+      end
+      subject.build('Mozart')
+    end
+  end
+
   describe "#tracks" do
     it "collects all of the tracks from the every album" do
       album1 = fake(:tracks => [1,2])

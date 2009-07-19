@@ -6,6 +6,12 @@ module Metamuse
 
     attr_accessor :name, :echonest_id, :freebase_guid, :mbid
 
+    def self.build(name)
+      artist = Services::Freebase.artist(name)
+      artist.enhance_albums!
+      artist
+    end
+
     def tracks
       @tracks ||= albums.map{|a| a.tracks}.flatten
     end
