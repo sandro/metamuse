@@ -34,7 +34,15 @@ module Metamuse
       self.albums = artist.albums
     end
 
+    def inspect
+      "#<#{self.class.inspect}:#{object_id.inspect}, name: #{name.inspect}, echonest_id: #{echonest_id.inspect}, freebase_guid: #{freebase_guid.inspect}, mbid: #{mbid.inspect}, albums: #{album_names.inspect}>"
+    end
+
     private
+
+    def album_names
+      @album_names ||= albums.map {|a| a.name}
+    end
 
     def lastfm_albums
       @lastfm_albums ||= Services::Lastfm.top_albums(name)
