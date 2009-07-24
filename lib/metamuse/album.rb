@@ -7,10 +7,14 @@ module Metamuse
     attr_accessor :name, :release_date, :freebase_id, :mbid, :rank, :images
 
     def <=>(other)
-      if rank
-        rank <=> other.rank
+      if rank && other.rank
+        rank.to_i <=> other.rank.to_i
+      elsif rank
+        -1
+      elsif other.rank
+        1
       else
-        to_s <=> other.to_s
+        0
       end
     end
 
