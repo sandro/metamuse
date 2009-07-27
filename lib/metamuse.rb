@@ -7,6 +7,7 @@ require 'httparty'
 require 'httparty_ext'
 require 'object_ext'
 require 'array_ext'
+require 'hash_ext'
 require 'arrayish'
 
 require 'metamuse/instance_initialize'
