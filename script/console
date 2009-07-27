@@ -1,8 +1,25 @@
 #!/usr/bin/env ruby
-# File: script/console
-irb = RUBY_PLATFORM =~ /(:?mswin|mingw)/ ? 'irb.bat' : 'irb'
+$:.unshift File.dirname(__FILE__)+"/../lib"
 
-libs = " -r irb/completion"
-libs << " -r lib/metamuse.rb"
+require 'metamuse'
+require 'irb'
 
-exec "#{irb} #{libs} --simple-prompt"
+IRB.setup(nil)
+irb = IRB::Irb.new
+
+IRB.conf[:MAIN_CONTEXT] = irb.context
+
+irb.context.evaluate("require 'irb/completion'", 0)
+irb.context.evaluate("Metamuse.send(:register_api_keys)", 0)
+irb.context.evaluate(%(
+def reload!()
+  $".grep(/^metamuse/).each {|e| load(e) }
+end
+), 0)
+
+trap("SIGINT") do
+  irb.signal_handle
+end
+catch(:IRB_EXIT) do
+  irb.eval_input
+end
