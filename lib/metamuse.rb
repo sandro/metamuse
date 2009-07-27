@@ -9,6 +9,7 @@ require 'object_ext'
 require 'array_ext'
 require 'arrayish'
 
+require 'metamuse/instance_initialize'
 require 'metamuse/collection'
 require 'metamuse/association'
 require 'metamuse/services'
@@ -53,18 +54,6 @@ module Metamuse
     def register_api_keys
       api_keys.each do |service, value|
         send("#{service}_api_key=", value)
-      end
-    end
-  end
-
-  module InstanceInitialize
-    def initialize(attrs={})
-      attrs.each do |k,v|
-        if self.class.has_many_set.values.include?(k)
-          send "#{k}=", v
-        else
-          instance_variable_set "@#{k}", v
-        end
       end
     end
   end
