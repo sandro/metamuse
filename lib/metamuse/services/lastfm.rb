@@ -11,6 +11,13 @@ module Metamuse
       end
 
       def self.artist(name)
+        attributes = artist_info(name).best_guess.attributes.replace_key(:url, :lastfm_url)
+        ::Metamuse::Artist.new attributes
+      end
+
+      def self.artist_info(name)
+        response = get('', :query => {:method => 'artist.getinfo', :artist => name})
+        Artist.build response
       end
 
       private

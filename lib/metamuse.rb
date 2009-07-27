@@ -19,6 +19,7 @@ require 'metamuse/services/freebase'
 require 'metamuse/services/music_brainz'
 require 'metamuse/services/lastfm'
 require 'metamuse/services/lastfm/image'
+require 'metamuse/services/lastfm/artist'
 
 module Metamuse
   autoload :Artist, 'metamuse/artist'
