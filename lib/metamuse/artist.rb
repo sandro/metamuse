@@ -4,12 +4,18 @@ module Metamuse
     extend Association
     has_many :albums, Album
 
-    attr_accessor :name, :echonest_id, :freebase_guid, :mbid
+    attr_reader :name, :echonest_id, :freebase_guid, :mbid, :lastfm_url, :images, :listeners, :playcount, :similar_artists, :tags, :biography, :biography_summary
 
     def self.build(name)
       artist = Services::Freebase.artist(name)
       artist.enhance_albums!
       artist
+    end
+
+    def initialize(attrs={})
+      @images = []
+      @similar_artists = []
+      super
     end
 
     def tracks
@@ -35,7 +41,7 @@ module Metamuse
     end
 
     def inspect
-      "#<#{self.class.inspect}:#{object_id.inspect}, name: #{name.inspect}, echonest_id: #{echonest_id.inspect}, freebase_guid: #{freebase_guid.inspect}, mbid: #{mbid.inspect}, albums: #{album_names.inspect}>"
+      "#<#{self.class.inspect}:#{object_id.inspect}, name: #{name.inspect}, albums: #{album_names.inspect}>"
     end
 
     private
