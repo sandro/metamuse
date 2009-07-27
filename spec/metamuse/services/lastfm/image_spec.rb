@@ -15,7 +15,7 @@ describe Metamuse::Services::Lastfm::Image do
   end
 
   it "has small dimensions" do
-    subject.dimensions.should == Metamuse::Services::Lastfm::Image::DIMENSIONS[:small]
+    subject.dimensions.should == Metamuse::Services::Lastfm::Image::DIMENSIONS.index(:small)
   end
 
   describe "#size" do

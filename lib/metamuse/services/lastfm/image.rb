@@ -2,10 +2,11 @@ class Metamuse::Services::Lastfm::Image
   attr_reader :location, :size
 
   DIMENSIONS = {
-    :small => '34x34',
-    :medium => '64x64',
-    :large => '126x126',
-    :extra_large => '300x300'
+    "34x34"   => :small,
+    "64x64"   => :medium,
+    "126x126" => :large,
+    "252x247" => :extra_large,
+    "300x300" => :extra_large
   }
 
   def initialize(location)
@@ -14,7 +15,7 @@ class Metamuse::Services::Lastfm::Image
   end
 
   def dimensions
-    DIMENSIONS[size]
+    DIMENSIONS.index size
   end
 
   def height
@@ -28,14 +29,13 @@ class Metamuse::Services::Lastfm::Image
   private
 
   def set_size
-    @size = DIMENSIONS.index(dimension_value_from_location)
+    dimension = DIMENSIONS.keys.detect {|d| d =~ %r(^#{width_from_location}x)}
+    @size = DIMENSIONS[dimension]
   end
 
-  def dimension_value_from_location
+  def width_from_location
     size_regexp = %r(/serve/(\d+).*/)
     match = location.match size_regexp
-    if match && width = match.captures.first
-      "#{width}x#{width}"
-    end
+    match && match.captures.first
   end
 end
