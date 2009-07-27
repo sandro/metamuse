@@ -25,9 +25,14 @@ describe FakeObject do
         FakeObject::Fake.new.should be_instance_of(Fake)
       end
 
-      it "has a name" do
+      it "has a string for a name" do
         f = FakeObject::Fake.new 'fake'
-        f.name.should == 'fake'
+        f.__name__.should == 'fake'
+      end
+
+      it "has a symbol for a name" do
+        f = FakeObject::Fake.new :fake
+        f.__name__.should == :fake
       end
     end
 
@@ -37,15 +42,20 @@ describe FakeObject do
         f.greeting.should == 'hi'
       end
 
-      it "responds has a name" do
+      it "responds to its name" do
         f = FakeObject::Fake.new 'Greeter', :greeting => 'hi'
-        f.name.should == 'Greeter'
+        f.__name__.should == 'Greeter'
+      end
+
+      it "doesn't conflict with a stub for 'strategy'" do
+        f = FakeObject::Fake.new({:strategy => :run}, :strategy => :mock)
+        f.strategy.should == :run
       end
 
       it "uses the mock build strategy" do
         f = FakeObject::Fake.new({:greeting => 'hi'}, :strategy => :mock)
         f.greeting
-        f.strategy.should == :mock
+        f.__strategy__.should == :mock
       end
     end
 
