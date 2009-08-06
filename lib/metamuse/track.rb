@@ -9,5 +9,9 @@ module Metamuse
     def <=>(other)
       name <=> other.name
     end
+
+    def inspect
+      "#<#{self.class.inspect}:#{object_id.inspect}, index: #{index.inspect}, name: #{name.inspect}, album: #{album.name.inspect}>"
+    end
   end
 end
