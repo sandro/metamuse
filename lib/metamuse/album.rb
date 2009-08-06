@@ -3,6 +3,7 @@ module Metamuse
     include InstanceInitialize
     extend Association
     has_many :tracks, Track
+    belongs_to :artist, Artist
 
     attr_accessor :name, :release_date, :freebase_id, :mbid, :rank, :images
 
