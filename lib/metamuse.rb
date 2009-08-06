@@ -40,7 +40,7 @@ module Metamuse
     end
 
     def find_artist(name)
-      Services::Echonest.artist(name)
+      Services::Lastfm.artist(name)
     end
 
     private
