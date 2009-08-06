@@ -47,7 +47,7 @@ module Metamuse
     private
 
     def album_names
-      @album_names ||= albums.map {|a| a.name}
+      albums.map {|a| a.name}
     end
 
     def lastfm_albums
