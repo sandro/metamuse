@@ -14,7 +14,7 @@ module Metamuse
     def attributes
       attrs = {}
       instance_variables.each do |ivar|
-        attrs[ivar.sub('@', '').to_sym] = instance_variable_get(ivar)
+        attrs[ivar.to_s.sub('@', '').to_sym] = instance_variable_get(ivar)
       end
       attrs
     end
