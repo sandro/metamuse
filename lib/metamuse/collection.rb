@@ -17,7 +17,7 @@ module Metamuse
       Array.insist(items).each do |item|
         item = collection_class.new(item) unless collection_class === item
         append item
-        item.belongs owner
+        item.try(:belongs, owner)
       end
       self
     end

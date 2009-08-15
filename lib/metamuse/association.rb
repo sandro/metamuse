@@ -5,7 +5,6 @@ module Metamuse
         attr_accessor :has_many_set, :belongs_to_set
       end
       base.belongs_to_set = base.has_many_set = {}
-      base.send :include, InstanceMethods
     end
 
     def has_many(accessor, klass)
@@ -36,10 +35,8 @@ module Metamuse
       define_method(:"#{accessor}=") do |parent|
         instance_variable_set(:"@#{accessor}", parent)
       end
-    end
 
-    module InstanceMethods
-      def belongs(owner)
+      define_method(:belongs) do |owner|
         accessor = self.class.belongs_to_set[owner.class]
         send("#{accessor}=", owner) if accessor
       end

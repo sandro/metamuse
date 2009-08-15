@@ -8,9 +8,18 @@ class TestShoe
   end
 end
 
+class TestSock
+  extend Metamuse::Association
+  attr_accessor :color
+  def initialize(attrs={})
+    attrs.each {|k,v| send(:"#{k}=", v)}
+  end
+end
+
 class TestPerson
   extend Metamuse::Association
   has_many :shoes, TestShoe
+  has_many :socks, TestSock
 end
 TestShoe.class_eval { belongs_to :person, TestPerson }
 
@@ -69,6 +78,15 @@ describe Metamuse::Association do
     it "sets the shoe's person when not explicitly available in the hash" do
       @person.shoes << {:color => 'red'}
       @person.shoes.last.person.should == @person
+    end
+  end
+
+  describe "TestPerson has many socks, TestSock does not belong to TestPerson" do
+    it "does not explode" do
+      person = TestPerson.new
+      expect {
+        person.socks << {:color => 'red'}
+      }.to_not raise_error
     end
   end
 end

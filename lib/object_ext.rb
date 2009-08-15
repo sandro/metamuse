@@ -4,8 +4,8 @@ class Object
     self
   end
 
-  def try(method)
-    send(method) if respond_to? method
+  def try(method, *args)
+    send(method, *args) if respond_to? method
   end
 
   def attempt
