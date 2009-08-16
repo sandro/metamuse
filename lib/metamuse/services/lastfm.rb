@@ -11,7 +11,7 @@ module Metamuse
       end
 
       def self.artist(name)
-        attributes = artist_info(name).best_guess.attributes.rename_key(:url, :lastfm_url)
+        attributes = artist_info(name).attributes.rename_key(:url, :lastfm_url)
         ::Metamuse::Artist.new attributes
       end
 

@@ -1,8 +1,6 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe Metamuse::Artist do
-  subject { Metamuse::Artist.new :name => 'Mozart' }
-
   describe ".build_artist" do
     subject { Metamuse::Artist }
     it "gets and enhances freebase artist information" do
@@ -11,6 +9,18 @@ describe Metamuse::Artist do
         artist
       end
       subject.build('Mozart')
+    end
+  end
+
+  subject { Metamuse::Artist.new :name => 'Mozart' }
+
+  describe "#invalid?" do
+    it "declares new artists are valid by default" do
+      subject.should_not be_invalid
+    end
+
+    it "is invalid when built with an invalid flag" do
+      Metamuse::Artist.new(:invalid => true).should be_invalid
     end
   end
 
@@ -94,6 +104,20 @@ describe Metamuse::Artist do
       end
       subject.fetch_albums_and_tracks!
       subject.tracks.should == freebase_artist.tracks
+    end
+  end
+
+  describe "#best_guess" do
+    it "returns itself when the artist is valid" do
+      mock(subject).invalid? { false }
+      subject.best_guess.should == subject
+    end
+
+    it "returns the most similar artist when the artist is invalid" do
+      similar_artist = fake(:similar_artist)
+      mock(subject).similar_artists { [similar_artist] }
+      mock(subject).invalid? { true }
+      subject.best_guess.should == similar_artist
     end
   end
 end

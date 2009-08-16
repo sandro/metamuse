@@ -18,6 +18,10 @@ module Metamuse
       super
     end
 
+    def best_guess
+      invalid? ? similar_artists.first : self
+    end
+
     def tracks
       @tracks ||= albums.map{|a| a.tracks}.flatten
     end
@@ -42,6 +46,14 @@ module Metamuse
 
     def inspect
       "#<#{self.class.inspect}:#{object_id.inspect}, name: #{name.inspect}, albums: #{album_names.inspect}>"
+    end
+
+    def valid?
+      ! invalid?
+    end
+
+    def invalid?
+      @invalid
     end
 
     private

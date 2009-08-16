@@ -26,10 +26,6 @@ class Metamuse::Services::Lastfm::Artist
   end
   alias image= images=
 
-  def best_guess
-    valid? ? self : similar_artists.first
-  end
-
   def similar_artists=(attrs={})
     attrs['artist'].each do |artist_attrs|
       @similar_artists << self.class.new(artist_attrs)
@@ -40,6 +36,11 @@ class Metamuse::Services::Lastfm::Artist
   def stats=(stats)
     @playcount = stats['playcount']
     @listeners = stats['listeners']
+  end
+
+  def url=(url)
+    @url = url
+    @invalid = ! valid?
   end
 
   def valid?
