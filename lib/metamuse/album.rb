@@ -19,6 +19,13 @@ module Metamuse
       end
     end
 
+    def hash
+      [artist, name].hash
+    end
+
+    def eql?(other)
+      name == other.name
+    end
   end
 end
 
