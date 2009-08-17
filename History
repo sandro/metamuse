@@ -1,7 +1,11 @@
-0.1.3 07/19/2009
+0.1.4 08/19/2009
+  * Return an invalid artist when an artist search fails. Closes gh-6
+  * artist.albums.uniq returns unique albums by name. Closes gh-7
+
+0.1.3 08/19/2009
   * Artist controls validity and whether or not to use #best_guess
 
-0.1.2 07/18/2009
+0.1.2 08/18/2009
   * Modified Cracks date parser, queries for Radiohead now work
   * Ruby 1.9 compatibility
   * Moved Metamuse queries from echonest to Lastfm
