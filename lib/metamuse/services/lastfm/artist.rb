@@ -4,8 +4,12 @@ class Metamuse::Services::Lastfm::Artist
   include ::Metamuse::InstanceInitialize
 
   def self.build(response)
-    data = response['lfm']['artist']
-    new data
+    if response['lfm']['status'] == 'ok'
+      data = response['lfm']['artist']
+      new data
+    else
+      new :invalid => true
+    end
   end
 
   def initialize(attrs={})
@@ -44,6 +48,6 @@ class Metamuse::Services::Lastfm::Artist
   end
 
   def valid?
-    url !~ %r(/music/\+noredirect/)
+    url && url !~ %r(/music/\+noredirect/)
   end
 end

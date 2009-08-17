@@ -3,6 +3,17 @@ require File.expand_path(File.dirname(__FILE__) + '/../../../spec_helper')
 describe Metamuse::Services::Lastfm::Artist do
   subject { Metamuse::Services::Lastfm::Artist }
 
+  describe ".build" do
+    context "unsuccessful response from lastfm" do
+      it "returns an invalid artist with no similar artists" do
+        response = {'lfm' => {'status' => 'failed'}}
+        artist = subject.build(response)
+        artist.should_not be_valid
+        artist.similar_artists.should be_empty
+      end
+    end
+  end
+
   describe "#valid?" do
     it "is an invalid artist when the url contains '+noredirect'" do
       artist = subject.new :url => 'http://last.fm/music/+noredirect/Cold Play'
